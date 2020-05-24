@@ -1,0 +1,22 @@
+{
+    "env": {
+        "commonjs": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": [
+        "standard"
+    ],
+    "globals": {
+        "browser": true,
+        "element": true,
+        "by": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 11
+    },
+    "rules": {
+        "semi": "off",
+        "space-before-function-paren": ["error", "never"]
+    }
+}

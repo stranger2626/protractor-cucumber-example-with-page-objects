@@ -1,0 +1,45 @@
+{
+  "name": "protractor-cucumber-example-with-page-objects",
+  "version": "1.0.0",
+  "description": "A simple example of using protractor in conjuntion with cucumber",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "postinstall": "webdriver-manager update"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stranger2626/protractor-cucumber-example-with-page-objects.git"
+  },
+  "keywords": [
+    "BDD",
+    "Cucumber",
+    "Protractor"
+  ],
+  "author": "Matsvei.Murashka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stranger2626/protractor-cucumber-example-with-page-objects/issues"
+  },
+  "homepage": "https://github.com/stranger2626/protractor-cucumber-example-with-page-objects#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "cucumber": "^6.0.5",
+    "cucumber-html-reporter": "^5.2.0",
+    "cucumber-pretty": "^6.0.0",
+    "fs-extra": "^9.0.0",
+    "protractor": "^7.0.0",
+    "protractor-cucumber-framework": "^6.2.1",
+    "winston": "^3.2.1",
+    "yargs": "^15.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.1.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.2.5"
+  }
+}
