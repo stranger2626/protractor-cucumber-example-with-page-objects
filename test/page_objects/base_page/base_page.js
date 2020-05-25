@@ -3,17 +3,27 @@ const Element = require('../base_elements/base_element');
 const Collection = require('../base_elements/base_collection');
 
 class BasePage {
-  constructor(pageAlias, pageUrl) {
-    this.pageAlias = pageAlias;
+  constructor(pageName, pageUrl) {
+    this.pageName = pageName;
     this.pageUrl = pageUrl;
     this.pageElements = [
-      new Element('Contact Us Button', '.cta-button-ui')
+      new Element('Contact Us Button', '.cta-button-ui'),
+      new Collection('Navigation Links', '.top-navigation__item-link')
     ];
+  };
+
+  getElement(targetElementName) {
+    const targetElement = this.pageElements.find(element => element.name === targetElementName);
+    if (targetElement) {
+      return targetElement;
+    } else {
+      throw new Error(`No element with [${this.targetElementName}] name found on [${this.pageName}] page`);
+    }
   };
 
   wait(waitTimeInMilliseconds) {
     logger.debug(`Waiting [${waitTimeInMilliseconds}] milliseconds`);
-    return browser.sleep();
+    return browser.sleep(waitTimeInMilliseconds);
   };
 
   async getCurrentUrl() {
