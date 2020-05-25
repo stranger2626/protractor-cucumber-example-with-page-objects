@@ -4,7 +4,8 @@
   "description": "A simple example of using protractor in conjuntion with cucumber",
   "main": "index.js",
   "scripts": {
-    "test": "npm test",
+    "pretest": "node ./test/utils/clear_reports_dir.js && node ./test/utils/delete_log_files.js",
+    "test": "protractor ./test/config/protractor_config.js",
     "postinstall": "webdriver-manager update"
   },
   "repository": {
