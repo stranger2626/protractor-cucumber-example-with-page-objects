@@ -5,8 +5,8 @@ const reporter = require('cucumber-html-reporter');
 
 const reporterOptions = {
   theme: 'bootstrap',
-  jsonFile: path.join(__dirname, '../../../reports/report.json'),
-  output: path.join(__dirname, '../../../reports/cucumber_report.html'),
+  jsonFile: path.join(__dirname, '../../reports/report.json'),
+  output: path.join(__dirname, '../../reports/cucumber_report.html'),
   reportSuiteAsScenarios: true,
   launchReport: true
 };
@@ -31,7 +31,7 @@ exports.config = {
     require: [path.resolve('./test/step_definitions/**/*.js')],
     ignoreUncaughtExceptions: true,
     format: ['json:./reports/report.json', './node_modules/cucumber-pretty'],
-    tags: yargs.tag || '@epam'
+    tags: yargs.tag || '@smoke'
   },
   onPrepare: () => {
     logger.info('Disabling protractor sync');
